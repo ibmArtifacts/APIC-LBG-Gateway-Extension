@@ -15,9 +15,11 @@ WARNING: Deploying this gateway-extension may cause a short outage. The API Conn
 - Access to APIC API Manager (APIM) to create an api and invoke the LBG.  
   
 **Files to be created for the LBG gateway-extension:**  
-- manifest.json: The file that APIC will read to import the DataPower LBG export and add it to the apigw object in the apiconnect domain. [More details here.](https://www.ibm.com/docs/en/api-connect/10.0.5.x_lts?topic=gateway-extensions-manifest)
+- manifest.json: The file that APIC will read to import the DataPower LBG export and add it to the apigw object in the apiconnect domain.  
+[More details about the manifest definition may be found in the IBM APIC documentations.](https://www.ibm.com/docs/en/api-connect/10.0.5.x_lts?topic=gateway-extensions-manifest)
 - lbg.zip: The DataPower LBG export.  
-- lbg-add-on-apigw.json: The file that APIC will update the APIC gateway configuration to include the LBG to be used later.
+- lbg-add-on-apigw.json: The file that APIC will update the APIC gateway configuration to include the LBG to be used later.  
+[More details about overriding the configurations of the API Gateway may be found in the IBM APIC documentations.](https://www.ibm.com/docs/en/api-connect/10.0.5.x_lts?topic=type-apigw)  
 ****  
 
 **Here is a completed sample gateway-extension to (1) download, (2) unzip the lbg-add-on-apigw.zip, (3) unzip the lbg.zip to modify the export.xml, (4) re-zip the export, and (5) re-zipping the  lbg-add-on-apigw.zip to upload to APIC: [lbg-add-on-apigw.zip](https://github.com/ibmArtifacts/APIC-LBG-Gateway-Extension/blob/main/lbg-add-on-apigw.zip)**  
